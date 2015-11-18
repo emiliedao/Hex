@@ -21,7 +21,7 @@ public class GridView extends HexView {
 	private final int Y = 200;
 	private final int WIDTH = 800;
 	private final int HEIGHT = 700;
-	private final String TITLE = "Hex Game";
+	private final String TITLE = "Hex Game - Emilie DAO - S3A";
 	
 	private Drawing drawing;
 	
@@ -103,7 +103,11 @@ public class GridView extends HexView {
 		
 		return c;
 	}
-	
+		
+	public static List<Cell> getCells() {
+		return cells;
+	}
+
 	class Click extends MouseInputAdapter {
 
 		@Override 

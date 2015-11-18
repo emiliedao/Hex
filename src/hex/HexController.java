@@ -33,9 +33,17 @@ public class HexController {
 		c.neighbours();
 		for (Cell n : c.getNeighbours())
 			n.neighbours();
-		
+				
 		if (model.playerWins(player)) {
 			JOptionPane.showMessageDialog(null, model.playerString() + " wins! Congratulations!");
+			model.reinitGame();
+			for (Cell cell : GridView.getCells())
+				if (!cell.isGridBorder()) {
+					cell.setColor(Color.GRAY);
+					cell.setPlayed(false);
+					cell.clearNeighbours();
+				}
+					
 		}
 			
 		

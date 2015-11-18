@@ -79,6 +79,17 @@ public class HexModel extends Observable {
 		return false;
 	}
 	
+	public void reinitGame() {
+//		System.out.println("reinitGame");
+		
+		// Grid reinitialisation
+		for (int i=0; i<size; i++) 
+			for (int j=0; j<size; j++)
+				grid[i][j] = GRAY;
+		
+		currentPlayer = WHITE;
+		wins = false;
+	}
 	
 	private void searchOppositeSide(Cell onBorder, Cell c) {
 		c.setVisited(true);
@@ -106,16 +117,15 @@ public class HexModel extends Observable {
 //		System.out.println("player : " + player);
 		
 		// Initializing the attribute visited
-		for (int i=0; i<size-1; i++)
-			for (int j=0; j<size-1; j++)
-				GridView.getCell(i, j).setVisited(false);
+		for (Cell c : GridView.getCells())
+				c.setVisited(false);
 		
 		int i = 0;
 		int j;
 		
-		while (i<size-1 && !wins) {
+		while (i<size && !wins) {
 			j = 0;
-			while (j<size-1 && !wins) {
+			while (j<size && !wins) {
 				if (player == WHITE) {
 					if (i == 0 && grid[i][j] == WHITE) {
 //						System.out.println("White cell found on (" + i + "," + j + ")");

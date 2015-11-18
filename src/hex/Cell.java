@@ -109,7 +109,12 @@ public class Cell extends JComponent {
 	public int nbNeighbours() {
 		return neighbours.size();
 	}
-
+	
+	public void clearNeighbours() {
+		neighbours.clear();
+	}
+	
+	
 	/** Returns true if the cell has a neighbour of the same color in the grid **/
 //	public boolean hasASameColorNeighbour() {
 //		

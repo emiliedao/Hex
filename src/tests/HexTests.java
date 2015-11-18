@@ -22,9 +22,26 @@ public class HexTests {
 		assertTrue(c.getPolygon().contains(p1));
 		
 	}
+	
+	
+//	Cell topLeftCorner = new Cell(grid, 0, 0, new Point(0, 0), Color.WHITE, false);
+//	model.setGridCase(0, 0, HexModel.WHITE);
+//	HashSet<Cell> neighbours = topLeftCorner.getNeighbours();
+//	
+//	topLeftCorner.neighbours();
+//	assertFalse(topLeftCorner.hasASameColorNeighbour());
+//	assertTrue(neighbours.isEmpty());
+//	
+//	model.setGridCase(0, 1, HexModel.WHITE);
+//	topLeftCorner.neighbours();
+//	assertTrue(topLeftCorner.hasASameColorNeighbour());
+//	assertTrue(neighbours.contains(GridView.getCell(0, 1)));
+//	
+	
 //	
 //	@Test
 //	public void testTopLeftCornerNeighbors() {
+//		
 //		int size = 7;
 //		HexModel model = new HexModel(size);
 //		int[][] grid = model.getGrid();
